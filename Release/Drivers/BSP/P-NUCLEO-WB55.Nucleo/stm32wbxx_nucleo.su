@@ -1,0 +1,17 @@
+../Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h:539:22:LL_AHB2_GRP1_EnableClock	8	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:185:10:BSP_GetVersion	0	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:203:6:BSP_LED_Init	48	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:231:6:BSP_LED_DeInit	16	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:251:6:BSP_LED_On	0	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:265:6:BSP_LED_Off	0	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:279:6:BSP_LED_Toggle	0	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:306:6:BSP_PB_Init	40	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:350:6:BSP_PB_DeInit	16	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:368:10:BSP_PB_GetState	8	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:388:9:BSP_JOY_Init	112	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:418:18:BSP_JOY_GetState	8	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:942:9:BSP_COM_DeInit	8	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:975:26:MX_LPUART1_Init	0	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:904:9:BSP_COM_Init	48	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:1073:9:BSP_COM_SelectLogPort	0	static
+../Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c:1107:1:__io_putchar	24	static
