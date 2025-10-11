@@ -1,0 +1,39 @@
+CompileFlags:
+  Add:
+    # Basic cross-compilation setup
+    - --target=arm-none-eabi
+    - -mcpu=cortex-m4
+    - -mthumb
+    - -std=gnu11
+
+    # Essential defines
+    - -DUSE_HAL_DRIVER
+    - -DSTM32WB55xx
+    - -DDEBUG
+    - -DUSE_NUCLEO_64
+
+    # Include paths with absolute paths
+    - -I/home/dimi1729/Documents/olsn_projects/OLSNDR1_Fall2025/Core/Inc
+    - -I/home/dimi1729/Documents/olsn_projects/OLSNDR1_Fall2025/Drivers/STM32WBxx_HAL_Driver/Inc
+    - -I/home/dimi1729/Documents/olsn_projects/OLSNDR1_Fall2025/Drivers/STM32WBxx_HAL_Driver/Inc/Legacy
+    - -I/home/dimi1729/Documents/olsn_projects/OLSNDR1_Fall2025/Drivers/CMSIS/Device/ST/STM32WBxx/Include
+    - -I/home/dimi1729/Documents/olsn_projects/OLSNDR1_Fall2025/Drivers/CMSIS/Include
+    - -I/home/dimi1729/Documents/olsn_projects/OLSNDR1_Fall2025/Drivers/BSP/P-NUCLEO-WB55.Nucleo
+
+    # Suppress problematic warnings
+    - -Wno-unknown-pragmas
+    - -Wno-unused-parameter
+
+  Remove:
+    # Remove problematic flags
+    - -specs=*
+    - -Wl,*
+    - -MMD
+    - -MP
+
+Diagnostics:
+  MissingIncludes: None
+  UnusedIncludes: None
+
+Index:
+  StandardLibrary: No
