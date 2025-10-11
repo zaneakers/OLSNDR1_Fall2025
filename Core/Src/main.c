@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "PID.h"
 
 /* USER CODE END Includes */
 
@@ -46,6 +47,8 @@ static uint32_t delay = 250;
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
+PIDController servo_pid;
+double setpoint = 90;  // test setting to 90 degrees
 
 /* USER CODE END PV */
 
@@ -97,6 +100,7 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+  PID_init(&servo_pid, 1.0, 0.0, 0.01);
 
   /* USER CODE END 2 */
 
@@ -139,6 +143,7 @@ int main(void)
   {
 
     /* -- Sample board code for User push-button in interrupt mode ---- */
+    // TODO: Remove LED code
     BSP_LED_Toggle(LED_BLUE);
     HAL_Delay(delay);
 
@@ -147,6 +152,10 @@ int main(void)
 
     BSP_LED_Toggle(LED_RED);
     HAL_Delay(delay);
+
+    double current_position = get_servo_position();
+    double step_power = PID_step(&servo_pid, setpoint, current_position);
+    set_servo_power(step_power);
 
     /* USER CODE END WHILE */
 
@@ -172,7 +181,7 @@ int main(void)
 
     // A short delay is crucial. It controls your sampling rate.
     // A 10ms delay gives you a sampling rate of 100 Hz (100 samples/sec).
-    HAL_Delay(2);
+    HAL_Delay(20);
   }
   /* USER CODE END 3 */
 }
